@@ -293,44 +293,49 @@
                 <div class="talk-speaker">Liv Cornelissen, NIWA</div>
             </div>
             
-            <div class="talk">
-                <div class="talk-date">July 31, 2025</div>
-                <div class="talk-title">Compound impacts of sea urchin grazing and marine heatwaves on kelp collapse</div>
-                <div class="talk-speaker">Jiaxin Shi, University of Tasmania</div>
-            </div>
-            
-            <div class="talk">
-                <div class="talk-date">June 26, 2025</div>
-                <div class="talk-title">MHW research at NIWA/ESI, progress and ongoing initiatives</div>
-                <div class="talk-speaker">Erik Behrens, NIWA</div>
-            </div>
-            
-            <div class="talk">
-                <div class="talk-date">May 22, 2025</div>
-                <div class="talk-title">Interactions between cold cyclonic eddies and a western boundary current modulate marine heatwaves</div>
-                <div class="talk-speaker">Junde Li, Hohai University</div>
-            </div>
-            
-            <div class="talk">
-                <div class="talk-date">April 17, 2025</div>
-                <div class="talk-title">A global overview of marine heatwaves in a changing climate</div>
-                <div class="talk-speaker">Antonietta Capotondi, University of Colorado Boulder</div>
-            </div>
-            
-            <div class="talk">
-                <div class="talk-date">March 13, 2025</div>
-                <div class="talk-title">Talk title to be confirmed</div>
-                <div class="talk-speaker">Dr. Ming Feng, CSIRO</div>
-            </div>
-            
-            <div class="talk">
-                <div class="talk-date">February 20, 2025</div>
-                <div class="talk-title">Lifting the Lid on Marine Heatwaves</div>
-                <div class="talk-speaker">Neil Malan, UNSW</div>
-                <div class="talk-abstract">
-                    A perspective on the rapidly growing field of subsurface Marine Heatwaves.
+            <!-- Hidden talks that show on expand -->
+            <div id="moreTalks" style="display: none;">
+                <div class="talk">
+                    <div class="talk-date">July 31, 2025</div>
+                    <div class="talk-title">Compound impacts of sea urchin grazing and marine heatwaves on kelp collapse</div>
+                    <div class="talk-speaker">Jiaxin Shi, University of Tasmania</div>
+                </div>
+                
+                <div class="talk">
+                    <div class="talk-date">June 26, 2025</div>
+                    <div class="talk-title">MHW research at NIWA/ESI, progress and ongoing initiatives</div>
+                    <div class="talk-speaker">Erik Behrens, NIWA</div>
+                </div>
+                
+                <div class="talk">
+                    <div class="talk-date">May 22, 2025</div>
+                    <div class="talk-title">Interactions between cold cyclonic eddies and a western boundary current modulate marine heatwaves</div>
+                    <div class="talk-speaker">Junde Li, Hohai University</div>
+                </div>
+                
+                <div class="talk">
+                    <div class="talk-date">April 17, 2025</div>
+                    <div class="talk-title">A global overview of marine heatwaves in a changing climate</div>
+                    <div class="talk-speaker">Antonietta Capotondi, University of Colorado Boulder</div>
+                </div>
+                
+                <div class="talk">
+                    <div class="talk-date">March 13, 2025</div>
+                    <div class="talk-title">Talk title to be confirmed</div>
+                    <div class="talk-speaker">Dr. Ming Feng, CSIRO</div>
+                </div>
+                
+                <div class="talk">
+                    <div class="talk-date">February 20, 2025</div>
+                    <div class="talk-title">Lifting the Lid on Marine Heatwaves</div>
+                    <div class="talk-speaker">Neil Malan, UNSW</div>
+                    <div class="talk-abstract">
+                        A perspective on the rapidly growing field of subsurface Marine Heatwaves.
+                    </div>
                 </div>
             </div>
+            
+            <button id="showMoreBtn" onclick="togglePastTalks()" style="margin-top: 1rem;">Show More</button>
         </section>
         
         <section id="news">
@@ -831,11 +836,11 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2026 Oceania Marine Heatwave Seminar. Contact: n.malan@unsw.edu.au</p>
+            <p>&copy; 2026 Oceania Marine Heatwave Seminar. Contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="620c4c0f030e030c22170c11154c0706174c0317">[email&#160;protected]</a></p>
         </div>
     </footer>
     
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.getElementById('mailingListForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -848,10 +853,21 @@
             this.reset();
             
             // Note: In production, you'd send this data to a backend service
-            // For now, this is just a frontend demonstration
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.
+            // For now, this is just a fro
+    <script>
+        // Toggle show more/less for past talks
+        function togglePastTalks() {
+            const moreTalks = document.getElementById('moreTalks');
+            const btn = document.getElementById('showMoreBtn');
+            
+            if (moreTalks.style.display === 'none') {
+                moreTalks.style.display = 'block';
+                btn.textContent = 'Show Less';
+            } else {
+                moreTalks.style.display = 'none';
+                btn.textContent = 'Show More';
+            }
+        }
+    </script>
+</body>
+</html>
